@@ -68,6 +68,7 @@ def killAnds():
             System(f'adb shell su -c kill -9 {pid}')
 
 def forwardPort(port:int):
+    System('adb root')
     print(f"尝试转发端口{port}……")
     out = getOutPut(f"adb forward tcp:{port} tcp:{port}")
     if out.find('cannot bind')!=-1:
@@ -156,7 +157,6 @@ def doExit():
             ps.kill()
 
 if __name__ == '__main__':
-    System('adb root')
 
     args = parser.parse_args()
     if args.log:
