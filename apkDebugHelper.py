@@ -33,7 +33,7 @@ parser.add_argument('-a','--androidServer',const=23946,nargs='?',help='传入and
 parser.add_argument('-j','--jdb',const=8700,nargs='?',help='传入jdb调试端口,链接jdb调试,默认为8700。')
 parser.add_argument('-i','--apkInfo',action='store_true',help='获取apk信息,使用-p传入路径')
 parser.add_argument('-ia','--installApk',action='store_true',help='覆盖安装apk,使用-p传入路径')
-parser.add_argument('-k','--killAndroidServer',nargs='?',help='关闭本程序传入的android_server。')
+parser.add_argument('-k','--killAndroidServer',action='store_true',help='关闭本程序传入的android_server。')
 parser.add_argument('-p','--path',type=str,help='传入路径，用于查询信息或者调试apk')
 parser.add_argument('-l','--log',action='store_true',help='打印运行的命令')
 
